@@ -37,8 +37,8 @@ button:focus {
 header {
 	position: fixed;
 	width: 100%;
-	background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);
-	background: linear-gradient(to right, #ACB6E5, #74ebd5);
+	background: -webkit-linear-gradient(to right, #f3ef074b, #9e74eb);
+	background: linear-gradient(to right, #f3ef074b, #9e74eb);
 	display: flex;
 	flex-direction: row;
 	z-index: 999;
@@ -174,8 +174,8 @@ nav {
 
 footer {
 	align-content: flex-end;
-	background: -webkit-linear-gradient(to right, #ACB6E5, #74ebd5);
-		background: linear-gradient(to right, #ACB6E5, #74ebd5);
+	background: -webkit-linear-gradient(to right, #ACB6E5, #0c0c0c);
+		background: linear-gradient(to right, #f804d8, #161616);
 }
 
 .footer-container {
