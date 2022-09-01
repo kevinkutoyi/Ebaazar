@@ -72,14 +72,14 @@ function loadJSON(PATH) {
 // Fetch Cart page
 function getCart() {
   if (sessionStorage.getItem("isAuthenticated")) {
-    window.location = "/cart/cart.html";
+    window.location = "cart.html";
   } else {
     alert("You must login to use cart");
-    window.location = "/auth/login.html";
+    window.location = "login.html";
   }
 }
 
-// Adding removing active class funtionality to categories
+// Adding removing active class functionality to categories
 function getAll() {
   renderProducts();
   document.getElementById("cat-mob").classList.remove("active");
@@ -164,7 +164,7 @@ function addToCart(prodId) {
       CART.push({ id: prodId, count: 1 });
     }
     localStorage.setItem(currentUserCartKey, JSON.stringify(CART));
-    window.alert("Succesfully Added");
+    window.alert("Successfully Added");
     window.location.reload();
   } else {
     window.alert("You must login first.");
@@ -174,5 +174,5 @@ function addToCart(prodId) {
 // Logout current user
 function logout() {
   sessionStorage.clear();
-  window.location = "../index.html";
+  window.location = "index.html";
 }
