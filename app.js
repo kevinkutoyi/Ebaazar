@@ -1,9 +1,13 @@
 let CART = "";
-let PATH = "http://127.0.0.1:5501/data/products.json";
+let PATH = "products.json";
+// let PATH = "h/data/products.jsonttp://127.0.0.1:5501";
+// let PATH = "./data/products.json";
+// let PATH = "http://localhost:5501/data/products.json";
 // let PATH = "http://127.0.0.1:5500";
+//localhost:3000/contact/send'
 
 // check for current user
-function getUser() {
+http: function getUser() {
   if (sessionStorage.getItem("isAuthenticated")) {
     // display basket count
     let count = 0;
@@ -53,22 +57,16 @@ function loadJSON(PATH) {
     if (xhr.readyState === XMLHttpRequest.DONE) {
       if (xhr.status === 200) {
         let data = JSON.parse(xhr.responseText);
-        // data.use{
-        //   cors({
 
-        //   })
-        // }
         localStorage.setItem("products", JSON.stringify(data));
 
         // JSON.parse(localStorage.getItem("data"));
-      } else {
-        window.alert("Something went wrong, fetch!!");
       }
     }
   };
 
   xhr.open("GET", PATH, true);
-  xhr.send();
+  xhr.send(PATH);
 }
 
 // Fetch Cart page
